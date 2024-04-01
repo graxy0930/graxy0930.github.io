@@ -6,7 +6,7 @@
 	<style>
 
 		h4 {
-			color: green;
+			color: purple;
 		}
 
 		label {
@@ -14,12 +14,33 @@
 		}
 
 		input {
-			color: skyblue;
+			color: green;
 		}
 
 		div {
 			color: green;
 			margin: 5px;
+		}
+
+    	th img {
+			width: 100%;
+		}
+
+    	.right-table {
+        	float: center ;
+        	width: 50%;
+    	}
+
+		.right-table th {
+			text-align: center;
+			border-color: skyblue;
+			border-style: solid;
+		}
+
+    	.right-table td {
+			text-align: center;
+			border-color: lightgreen;
+			border-style: solid;
 		}
 
 	</style>
@@ -37,25 +58,82 @@
 		<label>指定送貨日期:</label>
 		<input type="date" name="date01"><br>
 		<label>服飾種類:(三選一)</label><br>
-		<input type="radio" name="clothes" id="clothes01" value="snoopy淺藍印花T恤(短袖)">snoopy淺藍印花T恤(短袖) 590元<br>
-		<input type="radio" name="clothes" id="clothes02" value="奶茶色休閒連帽上衣(長袖)">奶茶色休閒連帽上衣(長袖) 1,290元<br>
+		<input type="radio" name="clothes" id="clothes01" value="黑色印花T恤(短袖)">黑色印花T恤(短袖) 590元<br>
+		<input type="radio" name="clothes" id="clothes02" value="墨綠色休閒連帽上衣(長袖)">墨綠色休閒連帽上衣(長袖) 1290元<br>
 		<input type="radio" name="clothes" id="clothes03" value="休閒棒球外套">休閒棒球外套 390元<br>
+		<input type="radio" name="clothes" id="clothes04" value="休閒鞋">休閒鞋 1490元<br>
 	</form>
 	<br>
 	<button onclick="shoppingInfo()"><h4>結帳</h4></button>
 	<div id="demo"></div>
 	<script>
 		function shoppingInfo() {
-			const x = document.getElemenById("form01");
+			const x = document.getElementById("form01");
 			var item = "";
 			var price = 0;
-			var text = "h4>您的購物資訊如下:</>h4>";
+			var text = "<h4>您的購物資訊如下:</h4>";
 			var i;
-			for (i = o; i < 5; i++) {
+			for (i = 0; i < 5; i++) {
 				switch (i) {
 					case 0:
-						item = "姓名: ";
+						item = "姓名： ";
 						break;
+					case 1:
+						item = "收件住址：";
+						break;
+					case 2:
+						item = "電話：";
+						break;
+					case 3:
+						item = "電子郵件：";
+						break;
+					case 4:
+						item = "指定送貨日期：";
+						break;
+				}
+				text += item + x.elements[i].value + "<br>";
+			}
+			for (i =5; i <= 8; i++) {
+				if (x.elements[i].checked == true) {
+					switch (i) {
+						case 5:
+							price = 590;
+							break;
+						case 6:
+							price = 1290;
+							break;
+						case 7:
+							price = 390;
+							break;
+						case 8:
+							price = 1490;
+							break;
+					}
+					text += "服飾種類：" + x.elements[i].value + "<br>";
+					text += "價格合計：" + price + "元<br>";
+				}
+			}
+			document.getElementById("demo").innerHTML = text;
+		}
 	</script>
+
+	<div class="right-table">
+
+		<table border="1">
+			<table>
+				<tr>
+					<th><div><img src="1.jpg"></div></th>
+					<th><div><img src="2.jpg"></div></th>
+					<th><div><img src="3.jpg"></div></th>
+					<th><div><img src="4.jpg"></div></th>
+				</tr>
+
+				<tr>
+					<td>黑色印花T恤 NT$590</td>
+					<td>墨綠色休閒連帽上衣 NT$1290</td>
+					<td>棒球外套 NT$390</td>
+					<td>休閒鞋 NT$1490</td>
+				</tr>
+			</table>
 	</body>
 </html>
