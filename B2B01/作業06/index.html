@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+		<title>B2B01作業06</title>
+	<style>
+
+		h4 {
+			color: green;
+		}
+
+		label {
+			color: coral
+		}
+
+		input {
+			color: skyblue;
+		}
+
+		div {
+			color: green;
+			margin: 5px;
+		}
+
+	</style>
+</head>
+	<body>
+	<form id="form01">
+		<label>姓名:</label>
+		<input type="text" name="name01" value="張雅婷"><br>
+		<label>收件住址:</label>
+		<input type="text" name="address01" value="台北市信義區松山路541巷14弄17號4樓"><br>
+		<label>電話:</label>
+		<input type="tel" name="tel01" value="0920030930"><br>
+		<label>電子郵件:</label>
+		<input type="email" name="email01" value="emotiontwice@gmail.com"><br>
+		<label>指定送貨日期:</label>
+		<input type="date" name="date01"><br>
+		<label>服飾種類:(三選一)</label><br>
+		<input type="radio" name="clothes" id="clothes01" value="snoopy淺藍印花T恤(短袖)">snoopy淺藍印花T恤(短袖) 590元<br>
+		<input type="radio" name="clothes" id="clothes02" value="奶茶色休閒連帽上衣(長袖)">奶茶色休閒連帽上衣(長袖) 1,290元<br>
+		<input type="radio" name="clothes" id="clothes03" value="休閒棒球外套">休閒棒球外套 390元<br>
+	</form>
+	<br>
+	<button onclick="shoppingInfo()"><h4>結帳</h4></button>
+	<div id="demo"></div>
+	<script>
+		function shoppingInfo() {
+			const x = document.getElemenById("form01");
+			var item = "";
+			var price = 0;
+			var text = "h4>您的購物資訊如下:</>h4>";
+			var i;
+			for (i = o; i < 5; i++) {
+				switch (i) {
+					case 0:
+						item = "姓名: ";
+						break;
+	</script>
+	</body>
+</html>
