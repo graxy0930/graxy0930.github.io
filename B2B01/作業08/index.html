@@ -14,7 +14,7 @@
 		}
 
 		input {
-			color: brown;
+			color: purple;
 		}
 
 		div {
@@ -23,21 +23,20 @@
 		}
 
 		table {
-			width: 80%;
-		}
+    		width: 40%;
+    	}
 
-		tr {
-			text-align: left;
-		}
+    	tr {
+    		text-align: left;
+    	}
 
-		td {
-			border-color: pink;
-			border-style: solid;
-		}
+    	td {
+    		border-color: pink;
+    		border-style: solid;
+    	}
 
 		td:nth-child(1){
 			color: blue;
-			border-style: solid;
 		}
 
 	</style>
@@ -91,7 +90,7 @@
             }
 			text += "<td>" + item + "</td>";
 			text += "<td>" + x.elements[i].value + "</td>";
-			text += "<td>";
+			text += "</tr>";
 		}
 		for (i = 5; i <= 8; i++) {
 			if (x.elements[i].checked === true) {
