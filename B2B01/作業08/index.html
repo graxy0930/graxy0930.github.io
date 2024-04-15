@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>B2B01作業08</title>
+	<style>
+
+		h4 {
+			color: red;
+		}
+
+		label {
+			color: coral;
+		}
+
+		input {
+			color: brown;
+		}
+
+		div {
+			color: #FF8000;
+			margin: 5px;
+		}
+
+		table {
+			width: 80%;
+		}
+
+		tr {
+			text-align: left;
+		}
+
+		td {
+			border-color: pink;
+			border-style: solid;
+		}
+
+		td:nth-child(1){
+			color: blue;
+			border-style: solid;
+		}
+
+	</style>
+</head>
+<body>
+<form id="form01">
+	<label>姓名:</label>
+	<input type="text" name="name01" value="張雅婷"><br>
+	<label>收件住址:</label>
+	<input type="text" name="address01" value="台北市信義區松山路541巷14弄17號4樓"><br>
+	<label>電話:</label>
+	<input type="tel" name="tel01" value="0920030930"><br>
+	<label>電子郵件:</label>
+	<input type="email" name="email01" value="emotiontwice@gmail.com"><br>
+	<label>指定送貨日期:</label>
+	<input type="date" name="date01"><br>
+	<label>寵物種類:(四選一)</label><br>
+	<input type="radio" name="pets" id="pets01" value="稱霸宇宙的小獅子">稱霸宇宙的小獅子(含登記費) 400/隻<br>
+	<input type="radio" name="pets" id="pets02" value="公主氣質軟萌白兔">公主氣質軟萌白兔(含晶片費) 300/隻<br>
+	<input type="radio" name="pets" id="pets03" value="高冷可愛反差萌貓貓">高冷可愛反差萌貓貓(已結紮) 420/隻<br>
+	<input type="radio" name="pets" id="pets04" value="活蹦亂跳黏人大金毛">活蹦亂跳黏人大金毛(狂犬病預防注射) 120/隻<br>
+</form>
+<br>
+<button onclick="shoppingInfo()"><h4>結帳</h4></button>
+<div id="demo"></div>
+<script>
+	function shoppingInfo() {
+        const x = document.getElementById("form01");
+        var item = "";
+        var price = 0;
+        var text = "<h4>您的購物資訊如下:</h4>";
+        text += "<table>";
+        for (i = 0; i < 5; i++) {
+           text += "<tr>";
+           switch (i) {
+                case 0:
+                    item = "姓名： ";
+                    break;
+                case 1:
+                    item = "收件住址：";
+                    break;
+                case 2:
+                    item = "電話：";
+                    break;
+                case 3:
+                    item = "電子郵件：";
+                    break;
+                case 4:
+                    item = "指定送貨日期：";
+                    break;
+            }
+			text += "<td>" + item + "</td>";
+			text += "<td>" + x.elements[i].value + "</td>";
+			text += "<td>";
+		}
+		for (i = 5; i <= 8; i++) {
+			if (x.elements[i].checked === true) {
+				switch (i) {
+					case 5:
+						price = 400;
+						break;
+					case 6:
+						price = 300;
+						break;
+					case 7:
+						price = 420;
+						break;
+					case 8:
+						price = 120;
+						break;
+            	}
+				text += "<tr>";
+				text += "<td>" + "寵物種類: " + "</td>";
+				text += "<td>" + x.elements[i].value + "</td>";
+				text += "</tr>";
+				text += "<tr>";
+				text += "<td>" + "價格合計: " + "</td>";
+				text += "<td>" + price + "元</td>";
+				text += "</tr>";
+			}
+		}
+		text += "</table>";
+		document.getElementById("demo").innerHTML = text;
+	}
+</script>
+</body>
+</html>
