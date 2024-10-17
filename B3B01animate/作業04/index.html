@@ -21,7 +21,7 @@ function init() {
 	canvas = document.getElementById("canvas");
 	anim_container = document.getElementById("animation_container");
 	dom_overlay_container = document.getElementById("dom_overlay_container");
-	var comp=AdobeAn.getComposition("38A46D0659B6A54CB6F0771775BFE1A7");
+	var comp=AdobeAn.getComposition("2462568C4B58764B9980802E5A70C56D");
 	var lib=comp.getLibrary();
 	var loader = new createjs.LoadQueue(false);
 	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
@@ -59,9 +59,9 @@ function handleComplete(evt,comp) {
 <!-- write your code here -->
 </head>
 <body onload="init();" style="margin:0px;">
-	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:2880px; height:2880px">
-		<canvas id="canvas" width="2880" height="2880" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:2880px; height:2880px; position: absolute; left: 0px; top: 0px; display: block;">
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:627px; height:629px">
+		<canvas id="canvas" width="627" height="629" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:627px; height:629px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
 	</div>
 </body>
