@@ -1,0 +1,43 @@
+﻿{"frames": {
+
+"CachedBmp_1":
+{
+	"frame": {"x":0,"y":0,"w":518,"h":965},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":518,"h":965},
+	"sourceSize": {"w":518,"h":965}
+},
+"CachedBmp_2":
+{
+	"frame": {"x":0,"y":967,"w":588,"h":829},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":588,"h":829},
+	"sourceSize": {"w":588,"h":829}
+},
+"CachedBmp_3":
+{
+	"frame": {"x":520,"y":0,"w":582,"h":814},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":582,"h":814},
+	"sourceSize": {"w":582,"h":814}
+},
+"CachedBmp_4":
+{
+	"frame": {"x":590,"y":816,"w":528,"h":846},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":528,"h":846},
+	"sourceSize": {"w":528,"h":846}
+}},
+"meta": {
+	"app": "Adobe Animate",
+	"version": "24.0.5.40",
+	"image": "思緒達陣_atlas_3.png",
+	"format": "undefined",
+	"size": {"w":2048,"h":2048},
+	"scale": "1"
+}
+}
